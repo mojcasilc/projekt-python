@@ -474,7 +474,9 @@ def plot_evolve(slovar, disciplina):
                 continue
             r = 0
             # Zapis v sekundah pri vseh disciplinah
-            if s[2] == 'Did not start':
+            if s[2] == 'Did not start' or s[2] == 'WR':
+                continue
+            if s[2] == 'OR':
                 continue
             #pri nekaterih oi so bili pri teh dveh disciplinah časi drugače podani
             if disciplina == '500m-men' or disciplina == '500m-women':
@@ -590,7 +592,9 @@ def men_vs_women(slovar, mendisciplina, womendisciplina):
                 continue
             r = 0
             # Zapis v sekundah pri vseh disciplinah
-            if s[2] == 'Did not start':
+            if s[2] == 'Did not start' or s[2] == 'WR':
+                continue
+            if s[2] == 'OR':
                 continue
             if mendisciplina == '500m-men' or mendisciplina == '500m-women':
                 if ':' in s[2]:
@@ -621,7 +625,9 @@ def men_vs_women(slovar, mendisciplina, womendisciplina):
                 continue
             r = 0
             # Zapis v sekundah pri vseh disciplinah
-            if s[2] == 'Did not start':
+            if s[2] == 'Did not start' or s[2] == 'WR':
+                continue
+            if s[2] == 'OR':
                 continue
             if womendisciplina == '500m-men' or womendisciplina == '500m-women':
                 if ':' in s[2]:
@@ -703,10 +709,10 @@ koordinate = []
 
 # Klici funkcij
 
-imenik()
-pridobitev_podatkov_tekmovalcev()
-zapis_imen(seznam_tekmovalcev)
-rojstni_dnevi()
+#imenik()
+#pridobitev_podatkov_tekmovalcev()
+#zapis_imen(seznam_tekmovalcev)
+#rojstni_dnevi()
 
 shrani_podatke()
 
